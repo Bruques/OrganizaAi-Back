@@ -42,12 +42,19 @@ Estrutura de Pacotes
 
 com.seuprojeto
 ├── config
+
 ├── controller
+
 ├── dto
+
 ├── model
+
 ├── repository
+
 ├── service
+
 └── tests
+
 
 Endpoints
 
@@ -64,9 +71,13 @@ DELETE /api/v1/income/{id}
 Despesas
 
 POST /api/v1/expense
+
 GET /api/v1/expense
+
 PUT /api/v1/expense/{id}
+
 DELETE /api/v1/expense/{id}
+
 
 Dashboard
 
