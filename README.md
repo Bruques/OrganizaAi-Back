@@ -8,11 +8,63 @@ Java 17
 
 Spring Boot
 
+Spring Security com JWT
+
 MongoDB
 
 JUnit 5
 
 Maven
+
+Autenticação
+
+A aplicação usa autenticação com JWT (JSON Web Token). Os usuários precisam se registrar e fazer login para obter um token JWT. Esse token deve ser enviado no header de autorização (Authorization: Bearer token) para acessar os endpoints protegidos.
+
+Endpoints de Autenticação
+
+POST /auth/register - Cria um novo usuário.
+
+Requisição:
+
+{
+
+  "name": "Bruno Marques",
+  
+  "email": "bruno@email.com",
+  
+  "password": "123456"
+  
+}
+
+POST /auth/login - Retorna o token JWT.
+
+Requisição:
+
+{
+
+  "email": "bruno@email.com",
+  
+  "password": "123456"
+  
+}
+
+
+Resposta:
+
+{
+
+  "token": "eyJhbGciOiJIUzI1NiJ9..."
+  
+}
+
+
+Segurança com Spring Security
+
+Endpoints públicos: /auth/**
+
+Todos os outros endpoints exigem token JWT válido.
+
+Token JWT é validado em cada requisição.
 
 Funcionalidades
 
@@ -107,6 +159,14 @@ Clone o repositório
 git clone https://github.com/seuusuario/controle-financeiro-api.git
 
 Configure o MongoDB (local ou Atlas)
+
+Configure o application.properties ou application.yml:
+
+spring.data.mongodb.uri=mongodb+srv://usuario:senha@cluster.mongodb.net/seubanco
+
+jwt.secret=secreta
+
+jwt.expiration=86400000
 
 Execute a aplicação
 
