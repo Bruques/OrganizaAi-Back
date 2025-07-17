@@ -40,7 +40,8 @@ Imposto estimado (6% das receitas) - ainda fixado
 
 Estrutura de Pacotes
 
-com.seuprojeto
+com.OrganizaAi
+
 ├── config
 
 ├── controller
