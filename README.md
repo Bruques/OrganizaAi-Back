@@ -54,8 +54,11 @@ Endpoints
 Receitas
 
 POST /api/v1/income
+
 GET /api/v1/income
+
 PUT /api/v1/income/{id}
+
 DELETE /api/v1/income/{id}
 
 Despesas
